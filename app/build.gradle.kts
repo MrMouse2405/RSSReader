@@ -15,7 +15,8 @@ android {
     defaultConfig {
         applicationId = "com.example.rss244"
         minSdk = 24
-        targetSdk = 34
+        //noinspection EditedTargetSdkVersion
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -73,6 +74,7 @@ dependencies {
     // rss parser library
     implementation(libs.rssparser)
 
+
     // ksp processor
     implementation(kotlin("stdlib-jdk8"))
     implementation(libs.dagger.compiler)
@@ -86,6 +88,12 @@ dependencies {
     //Serialization :
     implementation(kotlin("stdlib"))
     implementation(libs.kotlinx.serialization.json)
+    implementation (libs.gson)
+
+    // Network Image Library
+    implementation (libs.compose)
+    implementation(libs.coil.compose)
+    implementation(libs.coil.network.okhttp)
 
 
 }
